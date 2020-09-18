@@ -7,23 +7,18 @@ import (
 	"log"
 	"os"
 )
-
 const (
 	mysql_users_username = "mysql_users_username"
 	mysql_users_password = "mysql_users_password"
 	mysql_users_host = "mysql_users_host"
 	mysql_users_schema = "mysql_users_schema"
-
 )
-
 var (
 	Client *sql.DB
 	username = os.Getenv(mysql_users_username)
 	password = os.Getenv(mysql_users_password)
 	host = os.Getenv(mysql_users_host)
 	schema = os.Getenv(mysql_users_schema)
-
-
 )
 
 func init() {
